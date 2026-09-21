@@ -2,8 +2,6 @@
 
 # Autonomous-Network-Operations-Incident-Coordination
 
-# Autonomous Network Operations Incident Coordination
-
 ## What this project does
 
 We're building a system that watches for problems in ML training jobs running
