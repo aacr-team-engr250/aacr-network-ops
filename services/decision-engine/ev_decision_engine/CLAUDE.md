@@ -18,6 +18,10 @@ The only exceptions:
 - The user explicitly asks for a **review** of code they've already written in these
   files (style, bugs, types, tests for it).
 - The user explicitly asks for a **bug fix** in code they've already written here.
+- The user explicitly asks to **add or rename plain data fields** on existing models in
+  `schemas.py` (e.g. a new optional field, a type on an existing field) — no new scoring
+  math, decision/policy logic, or model design. Still ask first if a requested field
+  looks like it's introducing logic rather than data (e.g. a computed/derived field).
 
 When in doubt about whether a request crosses this line, ask first rather than writing
 code into these three files.

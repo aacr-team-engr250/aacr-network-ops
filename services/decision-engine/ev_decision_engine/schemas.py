@@ -17,11 +17,17 @@ class Action(Enum):
 
 
 class Event(BaseModel):
+    # event_type is one of the 8 network incident types this system handles:
+    # network_partition, gradient_sync_latency, service_discovery_failure,
+    # packet_loss, bandwidth_saturation, load_balancer_failure,
+    # connection_timeout, cross_region_latency_spike
     event_type: str
     region: str
     severity: float
     timestamp: datetime
     correlation_id: str
+    affected_node_pair: str | None = None
+    latency_ms: float | None = None
 
 
 class TrustMetadata(BaseModel):
